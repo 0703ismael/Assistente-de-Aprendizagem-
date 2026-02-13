@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>IA de Idiomas</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IA de Idiomas com Avatares 3D</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>IA de Idiomas com Avatares 3D</header>
 
-<header>
-  🌎 IA de Idiomas - Escolha seu avatar
-</header>
+  <div id="avatarSelector">
+    <button id="btnFemale">👩 Mulher</button>
+    <button id="btnMale">👨 Homem</button>
+  </div>
 
-<div id="avatarChoice">
-  <p>Escolha seu avatar:</p>
-  <button onclick="chooseAvatar('female')">👩 Mulher</button>
-  <button onclick="chooseAvatar('male')">👨 Homem</button>
-</div>
+  <div id="main">
+    <div id="avatar3d"></div>
+    <div id="chatArea">
+      <div id="messages"></div>
+      <div id="inputArea">
+        <input type="text" id="userInput" placeholder="Digite sua mensagem..." autocomplete="off" />
+        <button id="sendBtn">Enviar</button>
+      </div>
+    </div>
+  </div>
 
-<div id="chatContainer" class="hidden"></div>
-
-<div id="inputArea" class="hidden">
-    <input type="text" id="userInput" placeholder="Digite algo..." />
-    <button id="sendBtn">Enviar</button>
-</div>
-
-<script src="script.js"></script>
+  <!-- Three.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
